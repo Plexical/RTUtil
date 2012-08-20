@@ -28,7 +28,10 @@ void test(NSString *name, BOOL result) {
 
 int main(int argc, char *argv[])
 {
-  NSMutableArray *methods = rt_methods([[WithFoo alloc] init]);
+  WithFoo *foo = [[WithFoo alloc] init];
+  NSMutableArray *methods = rt_methods(foo);
 
   test(@"'foo' in object", [methods containsObject:@"foo"]);
+  test(@"rt_classname correct",
+       [rt_classname(foo) isEqualToString:@"WithFoo"]);
 }

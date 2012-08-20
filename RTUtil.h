@@ -5,3 +5,4 @@
 #import <Foundation/Foundation.h>
 
 NSArray *rt_methods(id obj);
+NSString *rt_classname(id obj);
