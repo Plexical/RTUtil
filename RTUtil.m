@@ -20,9 +20,3 @@ NSArray *rt_methods(id obj) {
   free(cmethods);
   return result;
 }
-
-NSString *rt_classname(id obj) {
-  return [NSString
-           stringWithCString:class_getName([obj class])
-                    encoding:NSUTF8StringEncoding];
-}

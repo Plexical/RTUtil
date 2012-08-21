@@ -32,6 +32,4 @@ int main(int argc, char *argv[])
   NSMutableArray *methods = rt_methods(foo);
 
   test(@"'foo' in object", [methods containsObject:@"foo"]);
-  test(@"rt_classname correct",
-       [rt_classname(foo) isEqualToString:@"WithFoo"]);
 }
